@@ -10,9 +10,11 @@ import userRouter from "./routers/userRoute"
 const app = express();
 dotenv.config();
 app.use(cors({
-  origin: "http://localhost:3000",  // Allow localhost:3000 as the origin
-  credentials: true  // Allow credentials (cookies, headers, etc.)
+  origin: ["http://localhost:3000", "https://pix-frontend-eight.vercel.app"],  
+  credentials: true,  // Allow credentials (cookies, headers, etc.)
+  methods: ["GET", "POST"]
 }));
+
 
 
 app.use(cookieParser());
