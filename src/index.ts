@@ -10,9 +10,10 @@ import userRouter from "./routers/userRoute"
 const app = express();
 dotenv.config();
 app.use(cors({
-  origin: '*',  // Allow all origins
+  origin: "http://localhost:3000",  // Allow localhost:3000 as the origin
   credentials: true  // Allow credentials (cookies, headers, etc.)
 }));
+
 
 app.use(cookieParser());
 app.use(morgan("dev"));
